@@ -43,9 +43,9 @@ jobs:
       id: upload-release-asset-windows-x64
       uses: actions/upload-release-asset@v1.0.2
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ jobs.create_release.steps.create-release.outputs.upload_url }}
+        upload_url: ${{ steps.create-release.outputs.upload_url }}
         asset_path: build/bin/mingwX64/releaseExecutable/knative-vm.exe
         asset_name: knative-vm-windows-x64.exe
         asset_content_type: application/x-executable
@@ -68,9 +68,9 @@ jobs:
       id: upload-release-asset-linux-x64
       uses: actions/upload-release-asset@v1.0.2
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ jobs.create_release.steps.create-release.outputs.upload_url }}
+        upload_url: ${{ steps.create-release.outputs.upload_url }}
         asset_path: build/bin/linuxX64/releaseExecutable/knative-vm.kexe
         asset_name: knative-vm-linux-x64.kexe
         asset_content_type: application/x-executable
@@ -93,9 +93,9 @@ jobs:
 #      id: upload-release-asset-macos-x64
 #      uses: actions/upload-release-asset@v1.0.2
 #      env:
-#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #      with:
-#        upload_url: ${{ jobs.create_release.steps.create-release.outputs.upload_url }}
+#        upload_url: ${{ steps.create-release.outputs.upload_url }}
 #        asset_path: build/bin/macosX64/releaseExecutable/knative-vm.kexe
 #        asset_name: knative-vm-linux-x64.kexe
 #        asset_content_type: application/x-executable
