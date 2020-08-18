@@ -2,7 +2,7 @@ import de.twhx.knative.vm.StackVM
 import kotlinx.cinterop.*
 import platform.posix.*
 
-fun main(args: Array<String>) {
+actual fun main(args: Array<String>) {
 
     if (args.size != 1) {
         println("Usage: knative.exe <program.txt>")
