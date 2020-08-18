@@ -81,7 +81,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create-release.outputs.upload_url }}
-        asset_path: knative-vm-windows-x64.exe
+        asset_path: /home/runner/work/kotlin-native-vm/kotlin-native-vm/knative-vm-windows-x64.exe
         asset_name: knative-vm-windows-x64.exe
         asset_content_type: application/x-executable
     - name: Upload Release Asset (Linux x64)
@@ -91,7 +91,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create-release.outputs.upload_url }}
-        asset_path: knative-vm-linux-x64.kexe
+        asset_path: /home/runner/work/kotlin-native-vm/kotlin-native-vm/knative-vm-linux-x64.kexe
         asset_name: knative-vm-linux-x64.kexe
         asset_content_type: application/x-executable
 
