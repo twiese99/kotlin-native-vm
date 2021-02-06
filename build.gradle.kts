@@ -1,5 +1,5 @@
 plugins {
-    kotlin("multiplatform") version "1.4.21-2"
+    kotlin("multiplatform") version "1.4.30"
 }
 group = "de.twhx"
 version = "0.1.0-SNAPSHOT"
